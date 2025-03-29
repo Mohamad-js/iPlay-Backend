@@ -7,6 +7,9 @@ const port = process.env.PORT || 3400; // Use the PORT environment variable or d
 app.use(cors()); // Allow cross-origin requests
 app.use(express.json()); // Parse JSON requests
 
+// Serve static files from the "public" folder
+app.use(express.static('public'));
+
 // Load your data
 const data = require('./data.json');
 
